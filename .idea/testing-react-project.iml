@@ -10,5 +10,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="@types/karma-jasmine" level="application" />
+    <orderEntry type="library" name="@types/sinon" level="application" />
+    <orderEntry type="library" name="@types/enzyme" level="application" />
+    <orderEntry type="library" name="@types/karma-jasmine" level="application" />
+    <orderEntry type="library" name="@types/jest" level="application" />
   </component>
 </module>

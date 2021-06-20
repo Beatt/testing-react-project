@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Testing React Project  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objetivo
+El objetivo principal de este repositorio es presentar una serie
+de **casos** ficticiones que nos sirvan de apoyo para mostrar cuando
+ejecutar una prueba unitaria, integración o E2E.
 
-## Available Scripts
+## Técnologias
+- React 17
+- Jest
+- Enzyme
+- Eslint
+- Prettier
+- Axios 
+- i18next
 
-In the project directory, you can run:
+## Estructura de carpetas
+La propuesta de carpeta que se presenta a continuación tiene
+por objetivo ser escalable y fácil de entender.
 
-### `yarn start`
+- api
+- apps
+- assets
+- components
+- config
+- locales
+- services
+- tests
+- utils
+- views
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### api
+Nuestros endpoints.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### apps
+Definición de nuestras apps en caso de tener más de una.
 
-### `yarn test`
+### assets
+Imágenes, fonts y css globales reutilizables.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### components
+Componentes globales reutilizables
 
-### `yarn build`
+### config
+Configuraciones globales de bibliotecas de terceros.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### locales
+Internalización.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### services
+El servicio es una categoría amplia que abarca cualquier valor, 
+función o característica que necesite una aplicación. 
+Un servicio es típicamente una clase con un propósito 
+limitado y bien definido. Debería hacer algo específico y hacerlo bien.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Más detalle...](https://angular.io/guide/architecture-services)
 
-### `yarn eject`
+### tests
+Pruebas unitarias y de integración de nuestra app.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Convenciones
+- Replicar la misma estructura del componentes que estaremos probando. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Ejemplo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**views**
+- views/Entities/index.js
+- views/Entities/EntitiesTable.js
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**tests**
+- tests/views/Entities/index.test.js
+- tests/views/Entities/EntitiesTable.test.js
 
-## Learn More
+### utils
+Funciones y constantes globales reutilizables.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### views
+Vistas principales de nuestra app.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Convenciones
 
-### Code Splitting
+1. Solo debe de existir un index por vista
+2. Los componentes que se agreguen dentro de la vista tienen
+que estar nombrados por ***NombreDeLaVista+NombreDelComponente***
+3. Además de los componentes mencionados en el punto 2, también
+   podemos tener los siguientes (se recomienda 
+   solo mantener estos tres) 
+    - constants.js
+    - helpers.js
+    - styles.scss
+4. Los nombre de las vistas deberán estar en plural. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Ejemplo
 
-### Analyzing the Bundle Size
+- views/Companies/index.js
+- views/Companies/CompaniesTable.js
+- views/Companies/CompaniesCard.js
+- views/Companies/constants.js
+- views/Companies/helpers.js
+- views/Companies/styles.scss
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Casos
+Una serie de casos ficticiones tomados de Internet con el objetivo
+de desarrollar mediante pruebas.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. #### [Payment link](cases/PaymentLink/README.md)
